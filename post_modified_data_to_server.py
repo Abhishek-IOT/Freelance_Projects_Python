@@ -14,13 +14,9 @@ current_time=datetime.now().strftime('%Y-%m-%d')
 
 file=f'upload_log_{current_time}.txt'
 
-try :
-    with open(file,"w") as f:
-        f.write("File Created")
-except Exception as e:
-    print(e)
 
-
+success_count=0
+failure_count=0
 
 api_url="https://httpbin.org/post" 
 
@@ -33,18 +29,26 @@ for _,row in df.iterrows():
         "price":row["price"],
         "category":row["category"]
     }
-    
+   
     try:
         response=requests.post(api_url,json=load)
         if response.status_code==200:
-            msg=msg+f'Uploaded:{row['title']}'+'\n'
+                msg=msg+f'Uploaded:{row['title']}'+'\n'
+                success_count=success_count+1
+             
         else :
             msg=print(f'error occured : {response.status_code}')
+            failure_count=failure_count+1
+
     except Exception as e:
         print(f'Exception : {e}')
     
-print(msg)
-file.write(msg)
+
+#print(msg)
+with open(file,"w") as f:
+    f.write(msg)
+    f.write(f"Success Count : {success_count} \n")
+    f.write(f"Failure Count : {failure_count}")
     
         
 
