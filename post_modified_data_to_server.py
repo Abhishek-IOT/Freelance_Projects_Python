@@ -2,12 +2,25 @@
 import pandas as pd
 import requests
 import time
+from datetime import datetime
 
 #CREATING DATAFRAME FROM CSV DATA.
 df=pd.read_csv('Menu_data.csv')
 
 
-log_file=open("upload_log.txt","a")
+##DYNMAMIC LOG FILE CREATED
+current_time=datetime.now().strftime('%Y-%m-%d')
+
+
+file=f'upload_log_{current_time}.txt'
+
+try :
+    with open(file,"w") as f:
+        f.write("File Created")
+except Exception as e:
+    print(e)
+
+
 
 api_url="https://httpbin.org/post" 
 
@@ -31,7 +44,7 @@ for _,row in df.iterrows():
         print(f'Exception : {e}')
     
 print(msg)
-log_file.write(msg)
+file.write(msg)
     
         
 
