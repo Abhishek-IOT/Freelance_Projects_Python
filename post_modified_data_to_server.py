@@ -18,7 +18,7 @@ file=f'upload_log_{current_time}.txt'
 success_count=0
 failure_count=0
 
-api_url="https://httpbin.org/post" 
+api_url="https://httpbin.org/post_1" 
 
 msg=''
 for _,row in df.iterrows():
@@ -37,7 +37,7 @@ for _,row in df.iterrows():
                 success_count=success_count+1
              
         else :
-            msg=print(f'error occured : {response.status_code}')
+            msg=msg+f'error occured : {response.status_code} + \n'
             failure_count=failure_count+1
 
     except Exception as e:
