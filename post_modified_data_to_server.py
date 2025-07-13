@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 #CREATING DATAFRAME FROM CSV DATA.
-df=pd.read_csv('Menu_data.csv')
+df=pd.read_csv('Menu_data_clean.csv')
 
 
 ##DYNMAMIC LOG FILE CREATED
