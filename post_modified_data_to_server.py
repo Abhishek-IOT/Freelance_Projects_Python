@@ -10,6 +10,8 @@ df=pd.read_csv('Menu_data.csv')
 
 ##DYNMAMIC LOG FILE CREATED
 current_time=datetime.now().strftime('%Y-%m-%d')
+current_time=datetime.now().strftime('%m_%d_%Y_%H')
+
 
 
 file=f'upload_log_{current_time}.txt'
@@ -18,7 +20,7 @@ file=f'upload_log_{current_time}.txt'
 success_count=0
 failure_count=0
 
-api_url="https://httpbin.org/post_1" 
+api_url="https://httpbin.org/post" 
 
 msg=''
 for _,row in df.iterrows():
