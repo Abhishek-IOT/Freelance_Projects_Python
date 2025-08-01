@@ -1,12 +1,21 @@
 {
-"Query_Merge_Select_Part" :
-{
-    "Target_Database" : "WAP",
+  "Query_Merge_Select_Part": {
+    "Target_Database": "WAP",
     "Target_Schema": "MARKET",
     "Target_Table": "CUSTOMER_DIMENSION"
-}
-
-
-
-
+  },
+  "ETL_Logic": {
+    "Columns": [
+      {
+        "Target_Column_Name": "CUSTOMER_NAME",
+        "Source_Column_Name": "STAGE_CUST",
+        "Logic": "CUST_NAME"
+      },
+      {
+        "Target_Column_Name": "CUSTOMER_NUMBER",
+        "Source_Column_Name": "STAGE_CUST",
+        "Logic": "CUST_NBR"
+      }
+    ]
+  }
 }
