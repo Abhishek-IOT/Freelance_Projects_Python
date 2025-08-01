@@ -1,0 +1,12 @@
+{
+"Query_Merge_Select_Part" :
+{
+    "Target_Database" : "WAP",
+    "Target_Schema": "MARKET",
+    "Target_Table": "CUSTOMER_DIMENSION"
+}
+
+
+
+
+}
