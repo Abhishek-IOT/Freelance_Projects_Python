@@ -1,0 +1,3 @@
+timestamp,user_id,action,product_id,amount,location
+2025-07-31T12:45:00Z,12345,purchase,A1009,49.99,India
+2025-07-31T12:45:00Z,12345,purchase,A1009,49.99,India
