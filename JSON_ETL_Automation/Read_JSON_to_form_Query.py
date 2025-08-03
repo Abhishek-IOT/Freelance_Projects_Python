@@ -13,9 +13,9 @@ print(query_generation)
 select_clauses=[]
 
 for col in data['ETL_Logic']['Columns']:
-    clause = f"{col['Source_Column_Name']}.{col['Logic']} AS {col['Target_Column_Name']}"
+    clause = f"{col['Source_Table_Name']}.{col['Logic']} AS {col['Target_Column_Name']}"
     select_clauses.append(clause)
 
 select_statement = "SELECT " + ",\n       ".join(select_clauses)
+select_statement=select_statement+ " FROM " +f'{data['Query_Merge_Select_Part']['Source_Table']}'
 print(select_statement)
-
