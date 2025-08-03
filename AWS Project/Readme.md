@@ -11,10 +11,17 @@ and loads it into Amazon Redshift for analytical querying. The entire flow is au
 
 # 📝 Project Flow
 1)Upload JSON to s3.
+
 2)Lambda Trigger: Automatically triggered when a new file arrives
+
 3)Reads JSON
+
 4)Converts to structured CSV using Pandas
+
 5)Uploads to s3
+
 6)Scheduled COPY to Redshift
+
 7)Every 5 minutes, EventBridge triggers a Redshift query.
+
 8)COPY command loads data from curated S3 to Redshift table MARKET.Cust
