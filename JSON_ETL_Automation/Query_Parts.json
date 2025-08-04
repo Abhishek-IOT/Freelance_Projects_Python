@@ -16,7 +16,14 @@
         "Target_Column_Name": "CUSTOMER_NUMBER",
         "Source_Table_Name": "STAGE_CUST",
         "Logic": "CUST_NBR"
+      },
+      {
+        "Target_Column_Name": "CUSTOMER_AGE",
+        "Source_Table_Name": "STAGE_AGE",
+        "Logic": "CUST_AGE"
       }
     ]
   }
+
+
 }
