@@ -19,3 +19,15 @@ for col in data['ETL_Logic']['Columns']:
 select_statement = "SELECT " + ",\n       ".join(select_clauses)
 select_statement=select_statement+ " FROM " +f'{data['Query_Merge_Select_Part']['Source_Table']}'
 print(select_statement)
+
+joiner_clause=[]
+for col in data['Joiner']:
+    clause=f"{col['type']}  JOIN {col['joiner_table']} ON {col['Condition']}"
+    #print(clause)
+    joiner_clause.append(clause)
+#print(joiner_clause)
+join_statement = ",\n       ".join(joiner_clause)
+print(join_statement)
+
+
+

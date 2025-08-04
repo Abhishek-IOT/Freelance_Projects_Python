@@ -23,7 +23,15 @@
         "Logic": "CUST_AGE"
       }
     ]
-  }
+  },
+  "Joiner":
+  [
+    {
+    "type" : "INNER",
+    "joiner_table" : "STAGE_AGE",
+    "Condition" : "STAGE_CUST.CUST_NAME=STAGE_AGE.CUST_NAME"
+    }
+  ]
 
 
 }
