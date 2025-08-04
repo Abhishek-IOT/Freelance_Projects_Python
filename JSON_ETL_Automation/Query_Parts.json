@@ -41,7 +41,12 @@
     "joiner_table" : "STAGE_CATEGORY",
     "Condition" : "STAGE_CATEGORY.CUST_NAME=STAGE_CUST.CUST_NAME"
     }
-  ]
+  ],
+  "Filter_Conditions" :
+  {
+    "Condition": "STAGE_AGE>=18"
+
+  }
 
 
 }

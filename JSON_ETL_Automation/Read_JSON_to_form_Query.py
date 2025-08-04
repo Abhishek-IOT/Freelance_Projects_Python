@@ -29,5 +29,7 @@ for col in data['Joiner']:
 join_statement = "\n       ".join(joiner_clause)
 print(join_statement)
 
+filter_statement=f'where {data['Filter_Conditions']['Condition']}'
+print(filter_statement)
 
 
