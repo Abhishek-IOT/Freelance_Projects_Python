@@ -21,6 +21,11 @@
         "Target_Column_Name": "CUSTOMER_AGE",
         "Source_Table_Name": "STAGE_AGE",
         "Logic": "CUST_AGE"
+      },
+       {
+        "Target_Column_Name": "CUSTOMER_CATEGORY",
+        "Source_Table_Name": "STAGE_CATEGORY",
+        "Logic": "CUST_CT_TYP"
       }
     ]
   },
@@ -30,6 +35,11 @@
     "type" : "INNER",
     "joiner_table" : "STAGE_AGE",
     "Condition" : "STAGE_CUST.CUST_NAME=STAGE_AGE.CUST_NAME"
+    },
+    {
+    "type" : "INNER",
+    "joiner_table" : "STAGE_CATEGORY",
+    "Condition" : "STAGE_CATEGORY.CUST_NAME=STAGE_CUST.CUST_NAME"
     }
   ]
 

@@ -26,7 +26,7 @@ for col in data['Joiner']:
     #print(clause)
     joiner_clause.append(clause)
 #print(joiner_clause)
-join_statement = ",\n       ".join(joiner_clause)
+join_statement = "\n       ".join(joiner_clause)
 print(join_statement)
 
 
